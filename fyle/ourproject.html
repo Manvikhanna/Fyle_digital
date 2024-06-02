@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .header h2 {
+            color: #ff0054;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .project-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .project-section img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        .project-details {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .project-item {
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .project-item:hover {
+            background-color: #ff0054;
+            color: #ffffff;
+        }
+        .project-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .project-item p {
+            margin: 10px 0 0;
+            font-size: 14px;
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #ff0054;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>OUR PROJECT</h2>
+            <h1>WHY WE ARE BEST</h1>
+        </div>
+        <div class="project-section">
+            <img src="our.png" alt="Project Image">
+            <div class="project-details">
+                <div class="project-item" data-index="1">
+                    <h3>Genderless Kei – Japan’s Hot</h3>
+                    <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
+                </div>
+                <div class="project-item active" data-index="2">
+                    <h3>Better Strategy & Quality</h3>
+                    <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
+                </div>
+                <div class="project-item" data-index="3">
+                    <h3>Genderless Kei – Japan’s Hot</h3>
+                    <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for dots navigation and item highlight on hover
+        const dots = document.querySelectorAll('.dot');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = dot.getAttribute('data-index');
+                projectItems.forEach(item => {
+                    if (item.getAttribute('data-index') === index) {
+                        item.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+                dots.forEach(d => d.classList.remove('active'));
+                dot.classList.add('active');
+            });
+        });
+
+        projectItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                const index = item.getAttribute('data-index');
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (dot.getAttribute('data-index') === index) {
+                        dot.classList.add('active');
+                    }
+                });
+                projectItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

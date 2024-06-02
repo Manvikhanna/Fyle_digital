@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .services {
+            text-align: center;
+        }
+
+        .services h2 {
+            color: red;
+            font-size: 24px;
+        }
+
+        .services h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .services p {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .service {
+            position: relative;
+            width: 30%;
+        }
+
+        .service img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 0, 0, 0.9);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .service:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay .text {
+            padding: 20px;
+        }
+
+        .overlay .read-more {
+            color: white;
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .overlay .read-more:hover {
+            background-color: white;
+            color: red;
+        }
+
+        .overlay .ourprojects
+        {
+            color: white;
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s; 
+        }
+
+        .overlay .ourprojects:hover
+        {
+            background-color: white;
+            color: red;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">AWARD WINNING DIGITAL MARKETING AGENCY</h1>
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <h2>WHAT WE DO</h2>
+            <h1>SERVICES PROVIDE FOR YOU</h1>
+            <p>Morbi sed lacus nec risus finibus feugiat at fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus feugiat at fermentum.</p>
+            <div class="service-container">
+                <div class="service" data-index="0">
+                    <img src="3rd fyle.png" alt="Service 1">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>WEB DEVELOPMENT</h3>
+                            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <!-- <a href="https://www.fylehq.com" target="_blank" class="read-more">READ MORE</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="service" data-index="1">
+                    <img src="3.1rd fyle - Copy.png" alt="Service 2">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>WEB DEVELOPMENT</h3>
+                            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <!-- <a href="https://www.fylehq.com" target="_blank" class="read-more">READ MORE</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="service" data-index="2">
+                    <img src="3.2rd fyle - Copy.png" alt="Service 3">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>WEB DEVELOPMENT</h3>
+                            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a href="https://www.fylehq.com" target="_blank" class="read-more">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service" data-index="3">
+                    <img src="3.3rd fyle - Copy.png" alt="Service 3">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>WEB DEVELOPMENT</h3>
+                            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <!-- <a href="https://www.fylehq.com" target="_blank" class="read-more">READ MORE</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="service" data-index="4">
+                    <img src="our.png" alt="Service 3">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>WEB DEVELOPMENT</h3>
+                            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a href="ourproject.html" class="ourprojects">OUR PROJECTS</a>
+                            <!-- <a href="https://www.fylehq.com" target="_blank" class="read-more">READ MORE</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </section>
+    </main>
+    <script>
+       
+        const services = document.querySelectorAll('.service');
+        const dots = document.querySelectorAll('.dot');
+
+        
+        services.forEach((service, index) => {
+            service.addEventListener('mouseover', () => {
+                setActiveService(index);
+            });
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                setActiveService(index);
+            });
+        });
+
+        // Function to set the active service
+        function setActiveService(index) {
+            // Remove active class from all dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            // Add active class to the clicked dot
+            dots[index].classList.add('active');
+
+            // Show overlay for the corresponding service
+            services.forEach(service => service.querySelector('.overlay').style.opacity = '0');
+            services[index].querySelector('.overlay').style.opacity = '1';
+        }
+
+        // Initialize the first service as active
+        setActiveService(0);
+    </script>
+</body>
+</html>
